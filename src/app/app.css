@@ -1,0 +1,219 @@
+.pokedex-casing {
+  width: 100%;
+  max-width: 1100px;
+  background-color: var(--pokedex-red);
+  border: 4px solid var(--console-border);
+  border-radius: 20px;
+  padding: 1.25rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.7), inset 0 2px 4px rgba(255,255,255,0.3);
+}
+
+.cartridge-bus-strip {
+  text-align: right;
+  font-family: var(--font-pixel);
+  font-size: 0.45rem;
+  color: var(--pokedex-red-dark);
+  margin-bottom: 0.4rem;
+}
+
+.console-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  gap: 0.75rem;
+}
+
+.power-orbs-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.main-blue-orb {
+  width: 42px;
+  height: 42px;
+  background: radial-gradient(circle at 35% 35%, #7ed6df 0%, #00a8ff 40%, #0c2461 90%);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 168, 255, 0.8);
+  position: relative;
+}
+
+.orb-reflection {
+  width: 10px;
+  height: 6px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  transform: rotate(-30deg);
+}
+
+.indicator-orbs {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.orb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.red-orb { background: #e74c3c; }
+.yellow-orb { background: #f1c40f; }
+.green-orb { background: #2ecc71; }
+
+.system-title-block {
+  font-family: var(--font-pixel);
+  font-size: 0.4rem;
+  color: var(--yellow-accent);
+  line-height: 1.4;
+  margin-left: 0.75rem;
+  flex-shrink: 0;
+}
+
+.header-main-title {
+  text-align: right;
+}
+
+.header-main-title h1 {
+  font-family: var(--font-pixel);
+  font-size: 1.1rem;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.sub-header-title {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #f5f6fa;
+}
+
+.crt-screen-casing {
+  background-color: var(--crt-bg);
+  border: 4px solid #000;
+  border-radius: 12px;
+  padding: 0.85rem;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.9);
+  margin: 0.75rem 0 1rem 0;
+}
+
+.screen-header-bar {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-pixel);
+  font-size: 0.48rem;
+  color: var(--cyan-accent);
+  border-bottom: 1px solid var(--crt-border);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+
+.screen-pwr-label {
+  color: #2ecc71;
+}
+
+.console-controls-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: var(--pokedex-red-dark);
+  border-radius: 10px;
+  border: 2px solid var(--console-border);
+  margin-bottom: 0.75rem;
+}
+
+.dpad {
+  width: 54px;
+  height: 54px;
+  position: relative;
+}
+
+.dpad-btn {
+  background: #2f3640;
+  border: 1px solid #000;
+  position: absolute;
+}
+
+.dpad-center { top: 18px; left: 18px; width: 18px; height: 18px; z-index: 2; }
+.dpad-up { top: 0; left: 18px; width: 18px; height: 20px; border-radius: 3px 3px 0 0; }
+.dpad-down { bottom: 0; left: 18px; width: 18px; height: 20px; border-radius: 0 0 3px 3px; }
+.dpad-left { top: 18px; left: 0; width: 20px; height: 18px; border-radius: 3px 0 0 3px; }
+.dpad-right { top: 18px; right: 0; width: 20px; height: 18px; border-radius: 0 3px 3px 0; }
+
+.control-label {
+  font-family: var(--font-pixel);
+  font-size: 0.4rem;
+  color: #000;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.pill-buttons-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.pill-btn {
+  width: 36px;
+  height: 10px;
+  background: #2f3640;
+  border-radius: 5px;
+  border: 1px solid #000;
+  transform: rotate(-25deg);
+}
+
+.pill-label {
+  font-family: var(--font-pixel);
+  font-size: 0.4rem;
+  color: #000;
+  display: block;
+  text-align: center;
+  margin-top: 0.2rem;
+}
+
+.action-buttons-container {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.round-action-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-a { background: #e74c3c; }
+.btn-b { background: #1abc9c; }
+
+.speaker-grille {
+  display: flex;
+  gap: 4px;
+}
+
+.speaker-grille div {
+  width: 4px;
+  height: 30px;
+  background-color: #1e272e;
+  border-radius: 2px;
+}
+
+.console-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-pixel);
+  font-size: 0.52rem;
+  color: var(--yellow-accent);
+}

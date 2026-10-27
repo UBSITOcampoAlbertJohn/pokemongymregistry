@@ -1,0 +1,9 @@
+<nav class="retro-nav-bar">
+  <div class="nav-left-group">
+    <a routerLink="/home" routerLinkActive="active" class="retro-btn btn-dark">HOME</a>
+    <a routerLink="/leaders" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="retro-btn btn-cyan">LEADERS</a>
+  </div>
+  <div class="nav-right-group">
+    <a routerLink="/leaders/new" routerLinkActive="active" class="retro-btn btn-yellow">+ REGISTER LEADER</a>
+  </div>
+</nav>

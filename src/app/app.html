@@ -1,0 +1,82 @@
+<div class="pokedex-casing">
+  <div class="cartridge-bus-strip">
+    <span>CARTRIDGE BUS: 8-BIT ROM OPEN</span>
+  </div>
+
+  <header class="console-header">
+    <div class="power-orbs-container">
+      <div class="main-blue-orb">
+        <div class="orb-reflection"></div>
+      </div>
+      <div class="indicator-orbs">
+        <span class="orb red-orb"></span>
+        <span class="orb yellow-orb"></span>
+        <span class="orb green-orb"></span>
+      </div>
+    </div>
+
+    <div class="system-title-block">
+      <div class="sys-meta">SILPH CO. // POKÉMON LEAGUE</div>
+      <div class="sys-model">MODEL DMG-89 // SILPH OS V1.0</div>
+    </div>
+
+    <div class="header-main-title">
+      <h1>POKÉMON LEAGUE REGISTRY</h1>
+      <span class="sub-header-title">AUTHORIZED RETRO INSPECTION TERMINAL</span>
+    </div>
+  </header>
+
+  <app-navbar />
+
+  <main class="crt-screen-casing">
+    <div class="screen-header-bar">
+      <span class="screen-bus-label">DUAL MATRIX BUS: CH-A (DMG) / CH-B (CRT-LCD)</span>
+      <span class="screen-cartridge-label">CARTRIDGE: INDIGO_LEAGUE.ROM</span>
+      <span class="screen-pwr-label">PWR: [===] 98%</span>
+    </div>
+
+    <router-outlet />
+  </main>
+
+  <footer class="console-controls-footer">
+    <div class="dpad-container">
+      <div class="dpad">
+        <div class="dpad-btn dpad-up"></div>
+        <div class="dpad-btn dpad-left"></div>
+        <div class="dpad-btn dpad-center"></div>
+        <div class="dpad-btn dpad-right"></div>
+        <div class="dpad-btn dpad-down"></div>
+      </div>
+      <span class="control-label">DIRECTIONAL PAD</span>
+    </div>
+
+    <div class="slider-vol-container">
+      <span class="vol-label">VOL / CONTRAST</span>
+      <div class="slider-track"><div class="slider-thumb"></div></div>
+      <div class="vol-min-max"><span>MIN</span><span>MAX</span></div>
+    </div>
+
+    <div class="pill-buttons-container">
+      <div class="pill-btn-group"><div class="pill-btn"></div><span class="pill-label">SELECT</span></div>
+      <div class="pill-btn-group"><div class="pill-btn"></div><span class="pill-label">START</span></div>
+    </div>
+
+    <div class="action-buttons-container">
+      <button type="button" class="round-action-btn btn-b">B</button>
+      <button type="button" class="round-action-btn btn-a">A</button>
+    </div>
+
+    <div class="speaker-grille">
+      <div></div><div></div><div></div><div></div><div></div>
+    </div>
+  </footer>
+
+  <div class="console-bottom-bar">
+    <div class="serial-no">
+      &#9654; POKÉDEX SERIAL: PK-909-INDIGO // DMG-89
+    </div>
+    <div class="quick-actions">
+      <a routerLink="/leaders/new" class="retro-btn btn-yellow">+ NEW GYM LEADER</a>
+    </div>
+  </div>
+</div>

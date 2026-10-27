@@ -1,0 +1,113 @@
+.retro-leader-card {
+  background: #1e272e;
+  border: 2px solid #2c3e50;
+  border-radius: 6px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+
+.retro-leader-card.card-kanto { border-top: 4px solid var(--region-kanto); }
+.retro-leader-card.card-johto { border-top: 4px solid var(--region-johto); }
+.retro-leader-card.card-hoenn { border-top: 4px solid var(--region-hoenn); }
+
+.card-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.region-pill {
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #fff;
+  background: #2f3640;
+}
+
+.card-kanto .region-pill { background: var(--region-kanto); }
+.card-johto .region-pill { background: var(--region-johto); }
+.card-hoenn .region-pill { background: var(--region-hoenn); }
+
+.level-indicator {
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  color: var(--yellow-accent);
+}
+
+.card-identity { margin-bottom: 0.5rem; }
+
+.leader-title {
+  font-family: var(--font-pixel);
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+
+.town-location {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #a4b0be;
+}
+
+.card-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.3);
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.badge-info {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  color: #fff;
+}
+
+.type-badge {
+  font-family: var(--font-pixel);
+  font-size: 0.45rem;
+  background: var(--yellow-accent);
+  color: #000;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.leader-motto {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #dcdde1;
+  background: rgba(255,255,255,0.05);
+  padding: 0.4rem;
+  border-left: 2px solid var(--cyan-accent);
+  margin-bottom: 0.6rem;
+  flex-grow: 1;
+}
+
+.card-action-bar {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.card-btn {
+  flex: 1;
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  padding: 0.35rem;
+  border: 1px solid #000;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn-edit { background: var(--cyan-dark); }
+.btn-del { background: var(--pokedex-red-dark); }

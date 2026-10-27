@@ -1,0 +1,100 @@
+<div class="dual-display-grid">
+  <!-- LEFT: Dot-Matrix Green Pokédex Sub-Display -->
+  <aside class="sub-display-panel">
+    <div class="sub-display-header">
+      <span class="sub-title">DOT MATRIX SUB-DISPLAY</span>
+      <span class="sub-status">• MEMORY OK</span>
+    </div>
+
+    <div class="green-matrix-screen">
+      <div class="matrix-title">SILPH POKÉ-REGISTRY</div>
+      <div class="matrix-sub">BATTLE ARCHIVE v1.02</div>
+      
+      <div class="matrix-divider">-----------------------</div>
+      <div class="matrix-label">CERTIFIED GYM COUNTERS:</div>
+      
+      <div class="counter-row">
+        <span>KANTO BADGES:</span>
+        <span class="count-val">0{{ kantoCount() }}/08</span>
+      </div>
+      <div class="counter-row">
+        <span>JOHTO BADGES:</span>
+        <span class="count-val">0{{ johtoCount() }}/08</span>
+      </div>
+      <div class="counter-row">
+        <span>HOENN BADGES:</span>
+        <span class="count-val">0{{ hoennCount() }}/08</span>
+      </div>
+
+      <div class="matrix-divider">-----------------------</div>
+      <div class="vault-label">BADGE VAULT [SYNCED]:</div>
+      
+      <div class="badge-vault-grid">
+        <div class="vault-box"><span>[ 1 ]</span><span>STONE</span></div>
+        <div class="vault-box"><span>[ 2 ]</span><span>ZEPHYR</span></div>
+        <div class="vault-box"><span>[ 3 ]</span><span>BOULDER</span></div>
+        <div class="vault-box"><span>[ 4 ]</span><span>EMPTY</span></div>
+      </div>
+
+      <div class="matrix-footer-log">
+        > STATUS: OK<br>
+        > TOTAL REGISTERED: {{ leaders().length }} LEADERS<br>
+        > SYNCHRONIZED: INDIGO LEAGUE
+      </div>
+    </div>
+    <div class="sub-display-bottom">SUB-LCD BATTERY HIGH</div>
+  </aside>
+
+  <!-- RIGHT: Gym Leader Directory Main Display -->
+  <section class="main-directory-panel">
+    <div class="directory-top-bar">
+      <div>
+        <h2 class="directory-heading">GYM LEADER DIRECTORY</h2>
+        <div class="terminal-sub">SILPH OS v1.0 // ACTIVE GYM INSPECTION TERMINAL</div>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="region-filter-bar">
+        <span class="filter-title">REGION:</span>
+        <button type="button" class="filter-btn" [class.active]="selectedRegion() === 'All'" (click)="setFilter('All')">ALL</button>
+        <button type="button" class="filter-btn" [class.active]="selectedRegion() === 'Kanto'" (click)="setFilter('Kanto')">KANTO</button>
+        <button type="button" class="filter-btn" [class.active]="selectedRegion() === 'Johto'" (click)="setFilter('Johto')">JOHTO</button>
+        <button type="button" class="filter-btn" [class.active]="selectedRegion() === 'Hoenn'" (click)="setFilter('Hoenn')">HOENN</button>
+      </div>
+    </div>
+
+    <!-- Leader Count Summary Row -->
+    <div class="summary-counters-row">
+      <div class="stat-badge kanto-badge">
+        <span>KANTO LEADER:</span> <strong>{{ kantoCount() }}</strong>
+      </div>
+      <div class="stat-badge johto-badge">
+        <span>JOHTO LEADER:</span> <strong>{{ johtoCount() }}</strong>
+      </div>
+      <div class="stat-badge hoenn-badge">
+        <span>HOENN LEADER:</span> <strong>{{ hoennCount() }}</strong>
+      </div>
+    </div>
+
+    <!-- Responsive Cards Grid -->
+    <div class="cards-grid">
+      @for (leader of filteredLeaders(); track leader._id) {
+        <app-leader-card
+          [leader]="leader"
+          (edit)="onEditLeader($event)"
+          (remove)="onDeleteLeader($event)"
+        ></app-leader-card>
+      } @empty {
+        <div class="empty-terminal-state">
+          <p>> NO GYM LEADERS REGISTERED IN THIS REGION SECTOR.</p>
+        </div>
+      }
+    </div>
+
+    <!-- Terminal Status Line -->
+    <div class="directory-bottom-status">
+      <span>TERMINAL READY // {{ filteredLeaders().length }} ENTRIES LOADED</span>
+      <span class="status-online">INDIGO-NET: ONLINE</span>
+    </div>
+  </section>
+</div>

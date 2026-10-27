@@ -1,0 +1,35 @@
+<div class="retro-leader-card" [class]="'card-' + leader().region.toLowerCase()">
+  <!-- Header: Region Tag & Ace Level -->
+  <div class="card-top-header">
+    <span class="region-pill">{{ leader().region }}</span>
+    <span class="level-indicator">LV: {{ leader().aceLevel }}</span>
+  </div>
+
+  <!-- Leader Name & Town -->
+  <div class="card-identity">
+    <h3 class="leader-title">{{ leader().name }}</h3>
+    <div class="town-location">
+      <span class="pin-icon">&#128204;</span> {{ leader().town }}
+    </div>
+  </div>
+
+  <!-- Gym Badge & Specialty Pill -->
+  <div class="card-badge-row">
+    <div class="badge-info">
+      <span class="badge-icon">&#127941;</span>
+      <span class="badge-name">{{ leader().badge }}</span>
+    </div>
+    <span class="type-badge">{{ leader().specialty }} TYPE</span>
+  </div>
+
+  <!-- Motto Blockquote -->
+  <blockquote class="leader-motto">
+    "{{ leader().motto }}"
+  </blockquote>
+
+  <!-- Action Controls -->
+  <div class="card-action-bar">
+    <button type="button" class="card-btn btn-edit" (click)="onEdit()">EDIT</button>
+    <button type="button" class="card-btn btn-del" (click)="onRemove()">DEL</button>
+  </div>
+</div>

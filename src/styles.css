@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --pokedex-red: #c0292b;
+  --pokedex-red-dark: #8e1b1d;
+  --console-border: #2c0809;
+  
+  --crt-bg: #12181b;
+  --crt-panel: #1a2226;
+  --crt-border: #2a363f;
+  
+  --matrix-green-bg: #1c330e;
+  --matrix-green-screen: #85ad18;
+  --matrix-green-dark: #3b520d;
+  --matrix-green-text: #a4d919;
+
+  --cyan-accent: #00d2d3;
+  --cyan-dark: #00838f;
+  --yellow-accent: #fbc531;
+  --yellow-dark: #e1b12c;
+  
+  --region-kanto: #e74c3c;
+  --region-johto: #f39c12;
+  --region-hoenn: #2ecc71;
+  
+  --font-pixel: 'Press Start 2P', monospace;
+  --font-lcd: 'VT323', monospace;
+  --font-mono: 'Share Tech Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0b0d0f;
+  color: #dcdde1;
+  font-family: var(--font-mono);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+/* Retro Hardware Button Utilities */
+.retro-btn {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 3px 0 #000;
+  transition: transform 0.05s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.retro-btn:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1), 0 1px 0 #000;
+}
+
+.btn-cyan {
+  background: linear-gradient(180deg, #00d2d3 0%, #0097e6 100%);
+  color: #051821;
+}
+
+.btn-yellow {
+  background: linear-gradient(180deg, #fbc531 0%, #e1b12c 100%);
+  color: #2f1700;
+}
+
+.btn-dark {
+  background: linear-gradient(180deg, #2f3640 0%, #191d21 100%);
+  color: #00d2d3;
+  border-color: #00d2d3;
+}

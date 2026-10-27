@@ -1,0 +1,86 @@
+.home-terminal-panel {
+  background: var(--crt-panel);
+  border: 2px solid var(--crt-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.home-hero-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--crt-border);
+}
+
+.hero-title {
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.hero-sub {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--cyan-accent);
+  margin-bottom: 1.25rem;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.distribution-section {
+  text-align: center;
+}
+
+.section-title {
+  font-family: var(--font-pixel);
+  font-size: 0.85rem;
+  color: var(--yellow-accent);
+  margin-bottom: 1.25rem;
+}
+
+.region-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.region-stat-card {
+  background: #12181b;
+  border: 2px solid var(--crt-border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.region-stat-card.card-kanto { border-top: 4px solid var(--region-kanto); }
+.region-stat-card.card-johto { border-top: 4px solid var(--region-johto); }
+.region-stat-card.card-hoenn { border-top: 4px solid var(--region-hoenn); }
+
+.region-name {
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  color: #fff;
+}
+
+.region-count {
+  font-family: var(--font-pixel);
+  font-size: 1.8rem;
+  color: var(--yellow-accent);
+  margin: 0.25rem 0;
+}
+
+.region-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #a4b0be;
+}

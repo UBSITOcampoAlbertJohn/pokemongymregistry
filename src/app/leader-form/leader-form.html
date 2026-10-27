@@ -1,0 +1,58 @@
+<div class="terminal-form-container">
+  <div class="form-terminal-header">
+    <h2>{{ isEditMode() ? 'EDIT GYM LEADER RECORD' : 'REGISTER NEW GYM LEADER' }}</h2>
+    <span class="form-subtitle">SILPH CO. DATABASE ENTRY MODULE</span>
+  </div>
+
+  <form [formGroup]="leaderForm" (ngSubmit)="onSubmit()" class="retro-form">
+    <div class="form-group">
+      <label for="name">LEADER NAME *</label>
+      <input id="name" type="text" formControlName="name" placeholder="e.g. Brock" />
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="region">REGION *</label>
+        <select id="region" formControlName="region">
+          <option value="Kanto">Kanto</option>
+          <option value="Johto">Johto</option>
+          <option value="Hoenn">Hoenn</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="town">TOWN / CITY *</label>
+        <input id="town" type="text" formControlName="town" placeholder="e.g. Pewter City" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="badge">BADGE NAME *</label>
+        <input id="badge" type="text" formControlName="badge" placeholder="e.g. Boulder Badge" />
+      </div>
+
+      <div class="form-group">
+        <label for="specialty">SPECIALTY TYPE *</label>
+        <input id="specialty" type="text" formControlName="specialty" placeholder="e.g. Rock" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="aceLevel">ACE POKÉMON LEVEL (1-100) *</label>
+      <input id="aceLevel" type="number" formControlName="aceLevel" min="1" max="100" />
+    </div>
+
+    <div class="form-group">
+      <label for="motto">LEADER MOTTO</label>
+      <textarea id="motto" formControlName="motto" rows="3" placeholder="Enter battle quote..."></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" [disabled]="leaderForm.invalid" class="retro-btn btn-yellow">
+        {{ isEditMode() ? 'UPDATE RECORD' : 'SAVE TO DATABASE' }}
+      </button>
+      <button type="button" (click)="onCancel()" class="retro-btn btn-dark">CANCEL</button>
+    </div>
+  </form>
+</div>
